@@ -529,3 +529,36 @@ body.light-mode h3,
 body.light-mode .section-title {
   color: var(--text-primary) !important;
 }
+/* Fix main site button to stay dark theme style */
+.nav-link[href="https://analytix.finance/"] {
+  background: var(--accent) !important;
+  color: #09090f !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+}
+
+body.light-mode .nav-link[href="https://analytix.finance/"] {
+  background: var(--accent) !important;
+  color: #09090f !important;
+}
+
+/* Reduce spacing between sections */
+.hero { padding: 60px 0 40px; }
+.map-cta { margin: 40px 0; }
+.featured-section { margin: 60px 0; }
+.categories-grid { margin: 30px 0; }
+
+/* Strengthen text in dark mode */
+body:not(.light-mode) h1,
+body:not(.light-mode) h2, 
+body:not(.light-mode) h3,
+body:not(.light-mode) .nav-brand-text,
+body:not(.light-mode) .hero-title {
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+body:not(.light-mode) .category-name,
+body:not(.light-mode) .article-title {
+  font-weight: 800 !important;
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ias-2",
+  "type": "standard",
+  "category": "ias", 
+  "title": "IAS 2 — المخزون",
+  "titleEn": "Inventories",
+  "author": "أكاديمية Analytix",
+  "publishedDate": "2026-04-22",
+  "readingTime": "10 دقيقة",
+  "tags": ["مخزون", "تكلفة", "تقييم"],
+  "content": {
+    "summary": "يحدد IAS 2 كيفية احتساب تكلفة المخزون وطرق تقييمه، مع التركيز على مبدأ التكلفة أو صافي القيمة القابلة للتحقق أيهما أقل.",
+    "sections": [
+      {
+        "type": "heading", 
+        "level": 2,
+        "text": "🎯 الأهداف"
+      },
+      {
+        "type": "paragraph",
+        "text": "تحديد المعالجة المحاسبية للمخزون وتقديم إرشادات لتحديد تكلفته والاعتراف اللاحق كمصروف."
+      }
+    ],
+    "keyTakeaways": [
+      "التقييم بالتكلفة أو صافي القيمة القابلة للتحقق أيهما أقل",
+      "طرق احتساب التكلفة: FIFO, Weighted Average"
+    ]
+  },
+  "pdf": { "available": true },
+  "status": "published"
+}

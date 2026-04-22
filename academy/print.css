@@ -1,0 +1,62 @@
+@media print {
+  @page { margin: 0; size: A4; }
+  nav,.art-nav-bottom,footer,.pdf-btn,.pdf-note,.contact-box { display:none!important; }
+  body { background:#fff!important; color:#000!important; margin:0; padding:0; }
+
+  /* هيدر أسود في كل صفحة */
+  .pdf-header {
+    display:flex!important;
+    align-items:center;
+    justify-content:space-between;
+    background:#09090f!important;
+    padding:14px 24px;
+    position:running(header);
+    width:100%;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  @page { @top-center { content: element(header); } }
+
+  .pdf-header-logo { height:36px; }
+  .pdf-header-center { font-size:14px; font-weight:600; color:#C9A84C!important; font-family:'Cairo',sans-serif; letter-spacing:1px; }
+  .pdf-header-name { font-size:12px; color:rgba(255,255,255,0.6)!important; font-family:'Cairo',sans-serif; }
+
+  /* علامة مائية */
+  .watermark {
+    display:block!important;
+    position:fixed!important;
+    top:50%!important;
+    left:50%!important;
+    transform:translate(-50%,-50%)!important;
+    opacity:0.06!important;
+    z-index:0!important;
+    pointer-events:none!important;
+    width:500px!important;
+  }
+
+  /* محتوى */
+  .art-hero,.art-body { padding:20px 24px!important; max-width:100%!important; position:relative; z-index:1; }
+  p { color:#222!important; text-align:justify!important; -webkit-print-color-adjust:exact; }
+  .highlight { background:#fffbe6!important; border-right:3px solid #C9A84C!important; color:#333!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .sec-title { color:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .infographic,.example,.summary { border:1px solid #ddd!important; background:#fafafa!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .six-card,.pr-card,.eq-box,.ex-card { background:#f5f5f5!important; border:1px solid #ddd!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .six-title,.eq-box-val,.ex-val,.founder-name,.team-name { color:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .six-desc,.pr-desc,.ex-lbl,.ex-sub,.art-meta span,.team-role,.team-date,.founder-title { color:#555!important; }
+  .tl-dot { background:#fff!important; border:2px solid #C9A84C!important; color:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .tl-lbl,.pr-num { color:#888!important; }
+  .pr-title,.eq-box-lbl { color:#333!important; }
+  .summary ul li { color:#333!important; text-align:justify!important; }
+  .founder-quote { color:#444!important; border-right:2px solid #C9A84C!important; text-align:justify!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .ex-note { color:#444!important; background:#f5f5f5!important; text-align:justify!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .tag { color:#666!important; border:1px solid #ddd!important; }
+  .team-link { color:#C9A84C!important; border:1px solid #C9A84C!important; background:#fffbe6!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .art-badge { color:#C9A84C!important; border:1px solid #C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .info-label { color:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .check { color:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .eq-op { color:#999!important; }
+  .tl-line { background:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .team-sig,.founder-msg { background:#fafafa!important; border:1px solid #ddd!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .art-divider { background:#C9A84C!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .sig-divider { background:#ddd!important; }
+}

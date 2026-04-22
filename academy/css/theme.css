@@ -562,3 +562,15 @@ body:not(.light-mode) .category-name,
 body:not(.light-mode) .article-title {
   font-weight: 800 !important;
 }
+
+/* Preload styles لمنع flash */
+html.light-preload body {
+  background: #FFFFFF !important;
+  color: #1E40AF !important;
+}
+
+html.light-preload .hero-title,
+html.light-preload h1, 
+html.light-preload h2 {
+  color: #1E40AF !important;
+}

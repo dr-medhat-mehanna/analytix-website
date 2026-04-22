@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2026-04-22"
+  },
+  "categories": [
+    {
+      "id": "ias",
+      "name": "معايير المحاسبة الدولية",
+      "nameEn": "IAS",
+      "icon": "📘",
+      "description": "International Accounting Standards - معايير المحاسبة الصادرة قبل 2001",
+      "color": "#C9A84C",
+      "path": "standards/ias",
+      "priority": 1
+    },
+    {
+      "id": "ifrs", 
+      "name": "معايير التقارير المالية الدولية",
+      "nameEn": "IFRS",
+      "icon": "📗",
+      "description": "International Financial Reporting Standards - المعايير الحديثة الصادرة بعد 2001",
+      "color": "#D4A843",
+      "path": "standards/ifrs",
+      "priority": 2
+    },
+    {
+      "id": "sox",
+      "name": "قانون ساربينز أوكسلي", 
+      "nameEn": "SOX",
+      "icon": "⚖️",
+      "description": "Sarbanes-Oxley Act - الحوكمة والإفصاح للشركات المدرجة",
+      "color": "#B8860B",
+      "path": "standards/sox",
+      "priority": 3
+    },
+    {
+      "id": "coso",
+      "name": "إطار COSO للرقابة الداخلية",
+      "nameEn": "COSO", 
+      "icon": "🛡️",
+      "description": "Committee of Sponsoring Organizations - إطار الرقابة الداخلية المعتمد عالمياً",
+      "color": "#DAA520",
+      "path": "standards/coso",
+      "priority": 4
+    },
+    {
+      "id": "internal-controls",
+      "name": "الإجراءات الرقابية",
+      "nameEn": "Internal Controls",
+      "icon": "🔒",
+      "description": "إجراءات الرقابة الداخلية التطبيقية في الشركات", 
+      "color": "#C9A84C",
+      "path": "internal-controls",
+      "priority": 5
+    },
+    {
+      "id": "cfo-tasks",
+      "name": "مهام المدير المالي",
+      "nameEn": "CFO Tasks",
+      "icon": "💼", 
+      "description": "دليل عملي شامل لمهام ومسؤوليات المدير المالي",
+      "color": "#D4A843",
+      "path": "cfo-tasks",
+      "priority": 6
+    },
+    {
+      "id": "articles",
+      "name": "مقالات متخصصة",
+      "nameEn": "Articles",
+      "icon": "📝",
+      "description": "مقالات تعليمية في الإدارة المالية والتحليل",
+      "color": "#B8860B", 
+      "path": "articles",
+      "priority": 7
+    },
+    {
+      "id": "books",
+      "name": "ملخصات كتب",
+      "nameEn": "Book Summaries",
+      "icon": "📚",
+      "description": "خلاصات أهم الكتب في المال والمحاسبة",
+      "color": "#DAA520",
+      "path": "books", 
+      "priority": 8
+    }
+  ]
+}

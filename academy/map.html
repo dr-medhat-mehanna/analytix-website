@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخريطة التفاعلية للمعايير | أكاديمية Analytix</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+<style>
+#map-container {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--accent);
+  color: var(--primary-bg);
+}
+
+.map-search {
+  width: 300px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.standard-node {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.standard-node:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.standard-node.ias {
+  background: linear-gradient(135deg, #3B82F6, #1E40AF);
+  color: white;
+}
+
+.standard-node.ifrs {
+  background: linear-gradient(135deg, #10B981, #047857);
+  color: white;
+}
+
+.standard-node.sox {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: white;
+}
+
+.standard-node.coso {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+}
+
+.connection-line {
+  position: absolute;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.connection-line.highlight {
+  opacity: 1;
+  height: 3px;
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="container nav-inner">
+    <a href="./" class="nav-brand">
+      <img src="assets/logo.png" alt="Analytix">
+      <span class="nav-brand-text">أكاديمية Analytix</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://analytix.finance/" class="nav-link">الرئيسية</a>
+      <a href="./" class="nav-link">الأكاديمية</a>
+      <button class="theme-toggle" aria-label="Toggle theme">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding: 60px 24px;">
+  <div style="text-align: center; margin-bottom: 40px;">
+    <span style="display: inline-block; padding: 6px 16px; background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 99px; font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-bottom: 20px;">🗺️ Interactive Map</span>
+    <h1>الخريطة التفاعلية للمعايير</h1>
+    <p style="color: var(--text-muted);">استكشف العلاقات بين المعايير المحاسبية والمالية</p>
+  </div>
+
+  <div class="map-filters">
+    <button class="filter-btn active" data-filter="all">جميع المعايير</button>
+    <button class="filter-btn" data-filter="ias">IAS</button>
+    <button class="filter-btn" data-filter="ifrs">IFRS</button>
+    <button class="filter-btn" data-filter="sox">SOX</button>
+    <button class="filter-btn" data-filter="coso">COSO</button>
+    <input type="text" class="map-search" placeholder="ابحث في المعايير..." id="mapSearch">
+  </div>
+
+  <div id="map-container">
+    <!-- سيتم ملؤها بـ JavaScript -->
+  </div>
+</div>
+
+<script src="js/theme.js"></script>
+<script>
+// خريطة المعايير والعلاقات
+const standards = [
+  { id: 'ias-1', name: 'IAS 1', title: 'عرض القوائم المالية', category: 'ias', x: 150, y: 100, connections: ['ias-7', 'ifrs-15'] },
+  { id: 'ias-2', name: 'IAS 2', title: 'المخزون', category: 'ias', x: 300, y: 150, connections: ['ias-16'] },
+  { id: 'ias-7', name: 'IAS 7', title: 'التدفقات النقدية', category: 'ias', x: 150, y: 250, connections: ['ias-1', 'ifrs-9'] },
+  { id: 'ias-16', name: 'IAS 16', title: 'الأصول الثابتة', category: 'ias', x: 450, y: 100, connections: ['ias-2'] },
+  { id: 'ifrs-9', name: 'IFRS 9', title: 'الأدوات المالية', category: 'ifrs', x: 600, y: 200, connections: ['ias-7', 'ifrs-15'] },
+  { id: 'ifrs-15', name: 'IFRS 15', title: 'الإيراد', category: 'ifrs', x: 750, y: 100, connections: ['ias-1', 'ifrs-9'] },
+  { id: 'section-302', name: 'SOX 302', title: 'مسؤولية الإدارة', category: 'sox', x: 200, y: 400, connections: ['section-404'] },
+  { id: 'section-404', name: 'SOX 404', title: 'الرقابة الداخلية', category: 'sox', x: 400, y: 350, connections: ['section-302', 'coso-framework'] },
+  { id: 'coso-framework', name: 'COSO', title: 'إطار الرقابة', category: 'coso', x: 600, y: 400, connections: ['section-404'] }
+];
+
+function renderMap() {
+  const container = document.getElementById('map-container');
+  container.innerHTML = '';
+  
+  // رسم الخطوط أولاً
+  standards.forEach(standard => {
+    standard.connections.forEach(connId => {
+      const connStandard = standards.find(s => s.id === connId);
+      if (connStandard) {
+        const line = createConnectionLine(standard, connStandard);
+        container.appendChild(line);
+      }
+    });
+  });
+  
+  // رسم النودز
+  standards.forEach(standard => {
+    const node = createStandardNode(standard);
+    container.appendChild(node);
+  });
+}
+
+function createStandardNode(standard) {
+  const node = document.createElement('div');
+  node.className = `standard-node ${standard.category}`;
+  node.style.left = standard.x + 'px';
+  node.style.top = standard.y + 'px';
+  node.innerHTML = `
+    <div style="text-align: center;">
+      <div style="font-weight: 700;">${standard.name}</div>
+      <div style="font-size: 0.7rem; opacity: 0.9;">${standard.title}</div>
+    </div>
+  `;
+  
+  node.addEventListener('click', () => {
+    window.location.href = `article.html?type=${standard.category}&id=${standard.id}`;
+  });
+  
+  return node;
+}
+
+function createConnectionLine(from, to) {
+  const line = document.createElement('div');
+  line.className = 'connection-line';
+  
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const length = Math.sqrt(dx*dx + dy*dy);
+  const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+  
+  line.style.width = length + 'px';
+  line.style.left = (from.x + 60) + 'px';
+  line.style.top = (from.y + 40) + 'px';
+  line.style.transform = `rotate(${angle}deg)`;
+  line.style.transformOrigin = '0 50%';
+  
+  return line;
+}
+
+// فلترة
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const filter = btn.dataset.filter;
+    const nodes = document.querySelectorAll('.standard-node');
+    
+    nodes.forEach(node => {
+      if (filter === 'all' || node.classList.contains(filter)) {
+        node.style.display = 'flex';
+      } else {
+        node.style.display = 'none';
+      }
+    });
+  });
+});
+
+// بحث
+document.getElementById('mapSearch').addEventListener('input', (e) => {
+  const query = e.target.value.toLowerCase();
+  const nodes = document.querySelectorAll('.standard-node');
+  
+  nodes.forEach((node, i) => {
+    const standard = standards[i % standards.length];
+    const matches = standard.name.toLowerCase().includes(query) || 
+                   standard.title.toLowerCase().includes(query);
+    node.style.display = matches ? 'flex' : 'none';
+  });
+});
+
+// رسم الخريطة عند التحميل
+document.addEventListener('DOMContentLoaded', renderMap);
+</script>
+
+</body>
+</html>

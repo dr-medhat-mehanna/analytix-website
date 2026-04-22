@@ -200,3 +200,31 @@
   
   window.AnalytixContent = { load: loadContent };
 })();
+
+// تحديث generatePDF function
+function generatePDF(data) {
+  if (window.AnalytixPDF) {
+    window.AnalytixPDF.generateStandardPDF(data);
+  } else {
+    // Fallback: فتح نافذة طباعة بسيطة
+    const printContent = `
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><title>${data.title}</title>
+<style>body{font-family:Arial;padding:20px;line-height:1.6;}h1{color:#D4AF37;}</style>
+</head>
+<body>
+<h1>${data.title}</h1>
+<p><strong>الملخص:</strong> ${data.content?.summary || ''}</p>
+${data.content?.keyTakeaways ? `<h3>النقاط الرئيسية:</h3><ul>${data.content.keyTakeaways.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
+<footer style="margin-top:40px;color:#666;">© أكاديمية Analytix | ${new Date().toLocaleDateString('ar-EG')}</footer>
+</body></html>`;
+    
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(printContent);
+    printWindow.document.close();
+    printWindow.onload = () => {
+      setTimeout(() => { printWindow.print(); printWindow.close(); }, 500);
+    };
+  }
+}

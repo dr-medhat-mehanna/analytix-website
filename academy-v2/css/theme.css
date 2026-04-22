@@ -508,3 +508,24 @@ footer a { color: var(--accent); }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Fix for Light Mode Text Visibility */
+body.light-mode .nav-brand-text {
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+  background: none !important;
+}
+
+body.light-mode .hero-title {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3,
+body.light-mode .section-title {
+  color: var(--text-primary) !important;
+}

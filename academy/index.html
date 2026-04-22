@@ -135,29 +135,7 @@ html.light-preload body { background: #FFFFFF; }
 </footer>
 
 <script src="js/theme.js"></script>
-<script>
-fetch('data/categories.json')
-  .then(r => r.json())
-  .then(data => {
-    const container = document.getElementById('categoriesContainer');
-    const html = data.categories.map((cat, i) => `
-      <a href="#${cat.id}" class="category-card fade-in-up" style="animation-delay: ${0.05 + i * 0.05}s">
-        <div class="category-icon">${cat.icon}</div>
-        <div class="category-name-en">${cat.nameEn}</div>
-        <h3 class="category-name">${cat.name}</h3>
-        <p class="category-desc">${cat.description}</p>
-        <div class="category-meta">
-          <span class="category-count">قريباً</span>
-          <span class="category-arrow">←</span>
-        </div>
-      </a>
-    `).join('');
-    container.innerHTML = html;
-  })
-  .catch(err => {
-    console.error('Failed to load categories:', err);
-  });
-</script>
 
 </body>
 </html>
+

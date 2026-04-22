@@ -127,7 +127,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
     <img src="https://i.postimg.cc/5NCrKCh6/mail-logo.png" alt="Analytix">
   </a>
   <a href="/academy" class="nav-back">← العودة للأكاديمية</a>
-  <a href="https://app.analytix.finance/register/trial" class="nav-btn">ابدأ مجانا</a>
+  <a href="https://app.analytix.finance/register/trial" class="nav-btn">ابدأ مجاناً</a>
 </nav>
 
 <div class="art-hero">
@@ -149,7 +149,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
 
   <div class="sec-title">ما هو IAS 1؟</div>
   <p>معيار المحاسبة الدولي رقم 1 هو المعيار الأساسي الذي يحدد كيفية عرض القوائم المالية للغرض العام. صدر لأول مرة عام 1975 وتم تحديثه عدة مرات، وهدفه ضمان أن القوائم المالية قابلة للمقارنة سواء مع قوائم المنشأة في فترات سابقة أو مع قوائم منشآت أخرى.</p>
-  <p>المعيار لا يحدد فقط شكل القوائم، بل يضع الحد الأدنى من المتطلبات للمحتوى، ويوضح أين وكيف تعرض البنود المختلفة.</p>
+  <p>المعيار لا يحدد فقط شكل القوائم، بل يضع الحد الأدنى من المتطلبات للمحتوى، ويوضح أين وكيف تُعرض البنود المختلفة.</p>
   <div class="highlight">الهدف الجوهري: توفير معلومات مالية مفيدة للمستخدمين — المستثمرين، الدائنين، والإدارة — لاتخاذ قرارات اقتصادية سليمة.</div>
 
   <div class="infographic">
@@ -181,7 +181,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
       <div class="pr-card"><div class="pr-num">03</div><div><div class="pr-title">الجوهر فوق الشكل</div><div class="pr-desc">الحقيقة الاقتصادية أهم</div></div></div>
       <div class="pr-card"><div class="pr-num">04</div><div><div class="pr-title">الأهمية النسبية</div><div class="pr-desc">الإفصاح عما يؤثر في القرارات</div></div></div>
       <div class="pr-card"><div class="pr-num">05</div><div><div class="pr-title">الثبات في العرض</div><div class="pr-desc">نفس الطريقة من فترة لأخرى</div></div></div>
-      <div class="pr-card"><div class="pr-num">06</div><div><div class="pr-title">أرقام المقارنة</div><div class="pr-desc">عرض أرقام الفترة السابقة دائما</div></div></div>
+      <div class="pr-card"><div class="pr-num">06</div><div><div class="pr-title">أرقام المقارنة</div><div class="pr-desc">عرض أرقام الفترة السابقة دائماً</div></div></div>
     </div>
     <div class="info-label" style="margin-top:20px;">دورة إعداد القوائم المالية</div>
     <div class="tl-wrap">
@@ -207,7 +207,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
       <div class="ex-card"><div class="ex-lbl">حقوق الملكية</div><div class="ex-val">1,177,000</div><div class="ex-sub">ريال · مارس 2026</div></div>
       <div class="ex-card"><div class="ex-lbl">صافي الربح</div><div class="ex-val">521,000</div><div class="ex-sub">ريال · مارس 2026</div></div>
     </div>
-    <div class="ex-note">التحقق من المعادلة: 2,280,000 = 582,000 + 1,177,000 + 521,000 ✓ — الميزانية متوازنة وفق IAS 1. الفرق بين الأصول والخصوم وحقوق الملكية يساوي صافي الربح قبل الإقفال السنوي، وهذا طبيعي تماما وليس خطأ محاسبيا.</div>
+    <div class="ex-note">التحقق من المعادلة: 2,280,000 = 582,000 + 1,177,000 + 521,000 ✓ — الميزانية متوازنة وفق IAS 1. الفرق بين الأصول والخصوم وحقوق الملكية يساوي صافي الربح قبل الإقفال السنوي، وهذا طبيعي تماماً وليس خطأ محاسبياً.</div>
   </div>
 
   <div class="sec-title">الخلاصة</div>
@@ -231,8 +231,8 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
   </div>
 
   <div style="margin:28px 0;">
-    <button class="pdf-btn" onclick="window.print()">تحميل PDF مجانا ↓</button>
-    <div class="pdf-note">يمكنك تحميل هذا المقال كـ PDF احتفاظا به أو مشاركته — مجانا من أكاديمية Analytix</div>
+    <button class="pdf-btn" onclick="window.print()">تحميل PDF مجاناً ↓</button>
+    <div class="pdf-note">يمكنك تحميل هذا المقال كـ PDF احتفاظاً به أو مشاركته — مجاناً من أكاديمية Analytix</div>
   </div>
 
   <div class="contact-box">
@@ -243,7 +243,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
         <div class="contact-label">البريد الإلكتروني</div>
         <div class="contact-val">info@analytix.finance</div>
       </a>
-      <a class="contact-item" href="https://wa.me/966550898988?text=مرحبا، لدي استفسار عن أكاديمية Analytix">
+      <a class="contact-item" href="https://wa.me/966550898988?text=مرحباً، لدي استفسار عن أكاديمية Analytix">
         <div class="contact-icon">💬</div>
         <div class="contact-label">واتساب</div>
         <div class="contact-val">+966 55 089 8988</div>
@@ -262,7 +262,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
       <div class="team-logo"><img src="https://i.postimg.cc/5NCrKCh6/mail-logo.png" alt="Analytix"></div>
       <div style="flex:1;">
         <div class="team-name">فريق Analytix Academy</div>
-        <div class="team-role">محتوى موثق ومراجع · أبريل 2026</div>
+        <div class="team-role">محتوى موثق ومراجَع · أبريل 2026</div>
         <div class="team-links">
           <a class="team-link" href="https://analytix.finance">analytix.finance</a>
           <a class="team-link" href="mailto:info@analytix.finance">info@analytix.finance</a>
@@ -273,7 +273,7 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
       <div class="team-date">13 أبريل 2026</div>
     </div>
     <div class="founder-msg">
-      <div class="founder-quote">أهدي هذه الأكاديمية لكل محاسب ومدير مالي وطالب في المنطقة العربية — آمنت دائما أن المعرفة المالية حق للجميع وليست حكرا على أحد. هدفنا في Analytix أن نجعل المعايير الدولية في متناول كل يد، وأن نبني جيلا من المحترفين الماليين القادرين على اتخاذ القرار الصحيح.</div>
+      <div class="founder-quote">أهدي هذه الأكاديمية لكل محاسب ومدير مالي وطالب في المنطقة العربية — آمنت دائماً أن المعرفة المالية حق للجميع وليست حكراً على أحد. هدفنا في Analytix أن نجعل المعايير الدولية في متناول كل يد، وأن نبني جيلاً من المحترفين الماليين القادرين على اتخاذ القرار الصحيح.</div>
       <div class="founder-bottom">
         <div>
           <div class="founder-name">مدحت مهنا</div>

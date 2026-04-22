@@ -62,14 +62,14 @@ footer{background:var(--dark2);border-top:0.5px solid var(--gold-border);padding
     <a href="/academy#books" class="nav-link">ملخصات كتب</a>
     <a href="/academy#articles" class="nav-link">مقالات</a>
     <a href="https://app.analytix.finance/login" class="nav-link">دخول</a>
-    <a href="https://app.analytix.finance/register/trial" class="nav-btn">ابدأ مجانا</a>
+    <a href="https://app.analytix.finance/register/trial" class="nav-btn">ابدأ مجاناً</a>
   </div>
 </nav>
 
 <div class="hero">
   <div class="eyebrow">أكاديمية أناليتكس</div>
-  <h1 class="hero-title">تعلم <span>المحاسبة الدولية</span><br>بأسلوب عملي ومبسط</h1>
-  <p class="hero-sub">معايير IFRS مشروحة · ملخصات كتب · مقالات متخصصة — كل ده مجانا وبالعربي</p>
+  <h1 class="hero-title">تعلّم <span>المحاسبة الدولية</span><br>بأسلوب عملي ومبسط</h1>
+  <p class="hero-sub">معايير IFRS مشروحة · ملخصات كتب · مقالات متخصصة — كل ده مجاناً وبالعربي</p>
   <div class="search-wrap">
     <input class="search-input" placeholder="ابحث عن معيار أو موضوع..." oninput="filterCards(this.value)">
   </div>

@@ -1,26 +1,26 @@
-/* Content Loader - يقرأ JSON ويبني الصفحة */
+/* Content Loader - Fixed HTML escaping */
 (function() {
   function $(selector) { return document.querySelector(selector); }
   function getQueryParam(name) {
     return new URLSearchParams(window.location.search).get(name);
   }
   
+  // إزالة HTML escaping للنصوص العربية
   function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+    if (!str) return '';
+    return str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
   
   const renderers = {
     heading: (s) => {
       const level = s.level || 2;
-      return `<h${level} class="article-heading level-${level}">${escapeHtml(s.text)}</h${level}>`;
+      return `<h${level} class="article-heading level-${level}">${s.text}</h${level}>`;
     },
-    paragraph: (s) => `<p class="article-paragraph">${escapeHtml(s.text)}</p>`,
+    paragraph: (s) => `<p class="article-paragraph">${s.text}</p>`,
     list: (s) => {
       const tag = s.style === 'numbered' ? 'ol' : 'ul';
       const className = s.style === 'numbered' ? 'article-ol' : 'article-ul';
-      const items = s.items.map(item => `<li>${escapeHtml(item)}</li>`).join('');
+      const items = s.items.map(item => `<li>${item}</li>`).join('');
       return `<${tag} class="${className}">${items}</${tag}>`;
     },
     callout: (s) => {
@@ -30,26 +30,26 @@
         <div class="callout callout-${variant}">
           <div class="callout-icon">${icons[variant] || '💡'}</div>
           <div class="callout-content">
-            ${s.title ? `<div class="callout-title">${escapeHtml(s.title)}</div>` : ''}
-            <div class="callout-text">${escapeHtml(s.text)}</div>
+            ${s.title ? `<div class="callout-title">${s.title}</div>` : ''}
+            <div class="callout-text">${s.text}</div>
           </div>
         </div>`;
     },
     example: (s) => `
       <div class="example-box">
         <div class="example-label">مثال تطبيقي</div>
-        <h4 class="example-title">${escapeHtml(s.title)}</h4>
+        <h4 class="example-title">${s.title}</h4>
         <div class="example-scenario">
-          <strong>السيناريو:</strong> ${escapeHtml(s.scenario)}
+          <strong>السيناريو:</strong> ${s.scenario}
         </div>
         <div class="example-solution">
-          <strong>الحل:</strong> ${escapeHtml(s.solution)}
+          <strong>الحل:</strong> ${s.solution}
         </div>
       </div>`,
     table: (s) => {
-      const thead = `<tr>${s.headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr>`;
+      const thead = `<tr>${s.headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
       const tbody = s.rows.map(row => 
-        `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`
+        `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
       ).join('');
       return `<div class="table-wrapper"><table class="article-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table></div>`;
     },
@@ -116,7 +116,7 @@
     if (takeawaysContainer && data.content.keyTakeaways) {
       takeawaysContainer.innerHTML = `
         <h3>📌 نقاط رئيسية</h3>
-        <ul>${data.content.keyTakeaways.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ul>`;
+        <ul>${data.content.keyTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>`;
     }
     
     const relatedContainer = $('.article-related');
@@ -126,7 +126,7 @@
         <div class="related-grid">
           ${data.content.relatedContent.map(r => `
             <a href="article.html?type=${r.type}&id=${r.id}" class="related-card">
-              <div class="related-title">${escapeHtml(r.title)}</div>
+              <div class="related-title">${r.title}</div>
               <div class="related-arrow">←</div>
             </a>`).join('')}
         </div>`;
@@ -135,7 +135,7 @@
     const tagsContainer = $('.article-tags');
     if (tagsContainer && data.tags) {
       tagsContainer.innerHTML = data.tags.map(t => 
-        `<span class="tag-chip">${escapeHtml(t)}</span>`
+        `<span class="tag-chip">${t}</span>`
       ).join('');
     }
     

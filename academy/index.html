@@ -139,3 +139,35 @@ html.light-preload body { background: #FFFFFF; }
 </body>
 </html>
 
+<script src="js/theme.js"></script>
+<script>
+fetch('data/categories.json')
+  .then(r => r.json())
+  .then(data => {
+    const container = document.getElementById('categoriesContainer');
+    const html = data.categories.map((cat, i) => `
+      <a href="${cat.id}.html" class="category-card fade-in-up" style="animation-delay: ${0.05 + i * 0.05}s">
+        <div class="category-icon">${cat.icon}</div>
+        <div class="category-name-en">${cat.nameEn}</div>
+        <h3 class="category-name">${cat.name}</h3>
+        <p class="category-desc">${cat.description}</p>
+        <div class="category-meta">
+          <span class="category-count">
+            ${cat.id === 'ias' ? '4 معايير' : 
+              cat.id === 'ifrs' ? '2 معايير' :
+              cat.id === 'sox' ? '2 أقسام' :
+              cat.id === 'coso' ? '1 إطار' : 'قريباً'}
+          </span>
+          <span class="category-arrow">←</span>
+        </div>
+      </a>
+    `).join('');
+    container.innerHTML = html;
+  })
+  .catch(err => {
+    console.error('Failed to load categories:', err);
+  });
+</script>
+
+</body>
+</html>

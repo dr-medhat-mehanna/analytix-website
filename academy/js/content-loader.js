@@ -182,3 +182,34 @@ ${data.content?.keyTakeaways ? `<div class="key-points">
     }
   });
 })();
+
+function updateAuthorSection(data) {
+  const authorSection = document.querySelector('.article-author');
+  if (!authorSection) return;
+  
+  if (data.author === 'مدحت مهنا') {
+    // توقيع مدحت مهنا الاحترافي
+    authorSection.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--accent), #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">م</div>
+        <div>
+          <div style="font-weight: 800; font-size: 19px; margin-bottom: 6px; color: var(--accent);">
+            <span style="font-family: 'Tajawal', serif; letter-spacing: 0.5px;">مدحت مهنا</span>
+            <div style="width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); margin-top: 2px; opacity: 0.6;"></div>
+          </div>
+          <div style="font-weight: 600; font-size: 14px; color: var(--text-primary);">مؤسس ومطور منصة Analytix</div>
+          <div style="color: var(--text-muted); font-size: 13px;">خبير التحليل المالي والتكنولوجيا المالية | 12+ عاماً خبرة</div>
+        </div>
+      </div>`;
+  } else {
+    // فريق العمل العادي
+    authorSection.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 20px;">A</div>
+        <div>
+          <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">فريق منصة Analytix</div>
+          <div style="font-weight: 500; color: var(--text-muted); font-size: 13px;">متخصصون في المعايير المحاسبية والتحليل المالي</div>
+        </div>
+      </div>`;
+  }
+}

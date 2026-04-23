@@ -1,88 +1,76 @@
 {
-  "meta": {
-    "version": "1.0",
-    "lastUpdated": "2026-04-22"
-  },
   "categories": [
     {
       "id": "ias",
       "name": "معايير المحاسبة الدولية",
-      "nameEn": "IAS",
+      "nameEn": "International Accounting Standards", 
       "icon": "📘",
-      "description": "International Accounting Standards - معايير المحاسبة الصادرة قبل 2001",
-      "color": "#C9A84C",
-      "path": "standards/ias",
-      "priority": 1
+      "description": "معايير المحاسبة الصادرة قبل 2001",
+      "count": "5 معايير",
+      "status": "active"
     },
     {
       "id": "ifrs", 
       "name": "معايير التقارير المالية الدولية",
-      "nameEn": "IFRS",
-      "icon": "📗",
-      "description": "International Financial Reporting Standards - المعايير الحديثة الصادرة بعد 2001",
-      "color": "#D4A843",
-      "path": "standards/ifrs",
-      "priority": 2
+      "nameEn": "International Financial Reporting Standards",
+      "icon": "📗", 
+      "description": "المعايير الحديثة الصادرة بعد 2001",
+      "count": "3 معايير", 
+      "status": "active"
     },
     {
       "id": "sox",
       "name": "قانون ساربينز أوكسلي", 
-      "nameEn": "SOX",
+      "nameEn": "Sarbanes-Oxley Act",
       "icon": "⚖️",
-      "description": "Sarbanes-Oxley Act - الحوكمة والإفصاح للشركات المدرجة",
-      "color": "#B8860B",
-      "path": "standards/sox",
-      "priority": 3
+      "description": "الحوكمة والإفصاح للشركات المدرجة",
+      "count": "2 أقسام",
+      "status": "active"
     },
     {
       "id": "coso",
       "name": "إطار COSO للرقابة الداخلية",
-      "nameEn": "COSO", 
+      "nameEn": "COSO Internal Control Framework", 
       "icon": "🛡️",
-      "description": "Committee of Sponsoring Organizations - إطار الرقابة الداخلية المعتمد عالمياً",
-      "color": "#DAA520",
-      "path": "standards/coso",
-      "priority": 4
-    },
-    {
-      "id": "internal-controls",
-      "name": "الإجراءات الرقابية",
-      "nameEn": "Internal Controls",
-      "icon": "🔒",
-      "description": "إجراءات الرقابة الداخلية التطبيقية في الشركات", 
-      "color": "#C9A84C",
-      "path": "internal-controls",
-      "priority": 5
+      "description": "الإطار المعتمد عالمياً للرقابة الداخلية",
+      "count": "1 إطار",
+      "status": "active"
     },
     {
       "id": "cfo-tasks",
       "name": "مهام المدير المالي",
-      "nameEn": "CFO Tasks",
-      "icon": "💼", 
-      "description": "دليل عملي شامل لمهام ومسؤوليات المدير المالي",
-      "color": "#D4A843",
-      "path": "cfo-tasks",
-      "priority": 6
+      "nameEn": "CFO Tasks & Responsibilities",
+      "icon": "👔", 
+      "description": "الأدوار والمسؤوليات الحديثة للمدير المالي",
+      "count": "قريباً",
+      "status": "coming-soon"
+    },
+    {
+      "id": "internal-controls", 
+      "name": "الإجراءات الرقابية",
+      "nameEn": "Internal Control Procedures",
+      "icon": "🔒",
+      "description": "إجراءات الرقابة الداخلية والحوكمة",
+      "count": "قريباً", 
+      "status": "coming-soon"
     },
     {
       "id": "articles",
-      "name": "مقالات متخصصة",
-      "nameEn": "Articles",
-      "icon": "📝",
-      "description": "مقالات تعليمية في الإدارة المالية والتحليل",
-      "color": "#B8860B", 
-      "path": "articles",
-      "priority": 7
+      "name": "المقالات المالية",
+      "nameEn": "Financial Articles", 
+      "icon": "📄",
+      "description": "مقالات ودراسات في المحاسبة والمالية",
+      "count": "قريباً",
+      "status": "coming-soon"
     },
     {
       "id": "books",
-      "name": "ملخصات كتب",
+      "name": "ملخصات الكتب",
       "nameEn": "Book Summaries",
-      "icon": "📚",
-      "description": "خلاصات أهم الكتب في المال والمحاسبة",
-      "color": "#DAA520",
-      "path": "books", 
-      "priority": 8
+      "icon": "📚", 
+      "description": "ملخصات أهم الكتب المالية والمحاسبية",
+      "count": "قريباً",
+      "status": "coming-soon"
     }
   ]
 }

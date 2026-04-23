@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAS 1 — عرض القوائم المالية | أكاديمية Analytix</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="container nav-inner">
+    <a href="./" class="nav-brand">
+      <img src="assets/logo.png" alt="Analytix" onerror="this.style.display='none'">
+      <span class="nav-brand-text">أكاديمية Analytix</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://analytix.finance/" class="nav-link">الرئيسية</a>
+      <a href="./" class="nav-link">الأكاديمية</a>
+      <button class="theme-toggle" aria-label="Toggle theme">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding: 40px 24px;">
+  
+  <!-- Header -->
+  <header style="text-align: center; margin-bottom: 50px;">
+    <div style="margin-bottom: 20px;">
+      <span style="display: inline-block; padding: 8px 20px; background: rgba(212, 175, 55, 0.15); border: 2px solid var(--accent); border-radius: 50px; font-size: 0.9rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px;">📘 IAS Standard</span>
+    </div>
+    <h1 style="font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent), #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">IAS 1 — عرض القوائم المالية</h1>
+    <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.6; max-width: 800px; margin: 0 auto;">معيار محاسبي أساسي يحدد المتطلبات العامة لعرض القوائم المالية ويضمن قابلية المقارنة مع القوائم المالية للشركة نفسها أو مع المنشآت الأخرى</p>
+  </header>
+
+  <!-- Action Buttons -->
+  <div style="text-align: center; margin-bottom: 50px;">
+    <button onclick="generatePDF()" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-left: 10px; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);">
+      📄 تحميل PDF
+    </button>
+    <a href="#takeaways" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: transparent; color: var(--accent); border: 2px solid var(--accent); border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none;">
+      📋 النقاط الرئيسية
+    </a>
+  </div>
+
+  <!-- Content Grid -->
+  <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px; margin-bottom: 60px;">
+    
+    <!-- Main Content -->
+    <div>
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <h2 style="color: var(--accent); margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">🎯 نطاق وأهداف المعيار</h2>
+        <p style="line-height: 1.8; margin-bottom: 20px; font-size: 1.1rem;">يطبق هذا المعيار على جميع القوائم المالية ذات الأغراض العامة المُعدة والمعروضة وفقاً للمعايير الدولية للتقارير المالية (IFRS).</p>
+        <p style="line-height: 1.8; font-size: 1.1rem;">يهدف المعيار إلى وضع الأساس الذي يضمن قابلية المقارنة مع القوائم المالية للفترات السابقة للمنشأة نفسها ومع القوائم المالية للمنشآت الأخرى.</p>
+      </div>
+
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin-bottom: 40px;">
+        <h2 style="color: var(--accent); margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">📋 مكونات القوائم المالية الكاملة</h2>
+        <div style="display: grid; gap: 15px;">
+          <div style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(212, 175, 55, 0.08); border-radius: 8px;">
+            <span style="background: var(--accent); color: white; padding: 6px; border-radius: 50%; font-size: 0.8rem; font-weight: bold;">1</span>
+            <span>قائمة المركز المالي (الميزانية العمومية)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(212, 175, 55, 0.08); border-radius: 8px;">
+            <span style="background: var(--accent); color: white; padding: 6px; border-radius: 50%; font-size: 0.8rem; font-weight: bold;">2</span>
+            <span>قائمة الأرباح والخسائر والدخل الشامل الآخر</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(212, 175, 55, 0.08); border-radius: 8px;">
+            <span style="background: var(--accent); color: white; padding: 6px; border-radius: 50%; font-size: 0.8rem; font-weight: bold;">3</span>
+            <span>قائمة التغيرات في حقوق الملكية</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(212, 175, 55, 0.08); border-radius: 8px;">
+            <span style="background: var(--accent); color: white; padding: 6px; border-radius: 50%; font-size: 0.8rem; font-weight: bold;">4</span>
+            <span>قائمة التدفقات النقدية</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding: 15px; background: rgba(212, 175, 55, 0.08); border-radius: 8px;">
+            <span style="background: var(--accent); color: white; padding: 6px; border-radius: 50%; font-size: 0.8rem; font-weight: bold;">5</span>
+            <span>الإيضاحات المتممة للقوائم المالية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div>
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 25px; margin-bottom: 25px; position: sticky; top: 20px;">
+        <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">📊 معلومات المعيار</h3>
+        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">
+          <div style="margin-bottom: 10px;"><strong>رقم المعيار:</strong> IAS 1</div>
+          <div style="margin-bottom: 10px;"><strong>تاريخ الإصدار:</strong> 2007</div>
+          <div style="margin-bottom: 10px;"><strong>تاريخ السريان:</strong> 1 يناير 2009</div>
+          <div style="margin-bottom: 10px;"><strong>وقت القراءة:</strong> 12 دقيقة</div>
+          <div><strong>المستوى:</strong> أساسي</div>
+        </div>
+      </div>
+
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 25px;">
+        <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;">🔗 محتوى ذو صلة</h3>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="padding: 12px; background: rgba(212, 175, 55, 0.08); border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 0.9rem;">IAS 7 — قائمة التدفقات النقدية</a>
+          <a href="#" style="padding: 12px; background: rgba(212, 175, 55, 0.08); border-radius: 8px; text-decoration: none; color: var(--text-primary); font-size: 0.9rem;">IFRS 15 — الإيراد من العقود</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- النقاط الرئيسية -->
+  <div id="takeaways" style="background: linear-gradient(135deg, var(--card-bg), rgba(212, 175, 55, 0.05)); border: 2px solid var(--accent); border-radius: 16px; padding: 40px; margin-bottom: 60px;">
+    <h2 style="color: var(--accent); margin-bottom: 25px; font-size: 1.8rem; text-align: center;">✨ النقاط الرئيسية</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <div style="text-align: center; padding: 20px;">
+        <div style="background: var(--accent); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">📋</div>
+        <p style="line-height: 1.6;">يضع الأساس لعرض القوائم المالية للأغراض العامة</p>
+      </div>
+      <div style="text-align: center; padding: 20px;">
+        <div style="background: var(--accent); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">⚖️</div>
+        <p style="line-height: 1.6;">يضمن قابلية المقارنة بين الفترات والشركات المختلفة</p>
+      </div>
+      <div style="text-align: center; padding: 20px;">
+        <div style="background: var(--accent); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">📊</div>
+        <p style="line-height: 1.6;">يحدد الحد الأدنى لمحتوى القوائم المالية</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- توقيع المؤلف في الأسفل -->
+  <footer style="text-align: center; padding: 40px 0; border-top: 2px solid rgba(212, 175, 55, 0.3); margin-top: 40px;">
+    <div style="margin-bottom: 30px;">
+      <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 28px; margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);">م</div>
+      <div style="font-weight: 800; font-size: 24px; color: var(--accent); margin-bottom: 8px;">
+        <span style="font-family: 'Tajawal', serif; letter-spacing: 0.5px;">مدحت مهنا</span>
+        <div style="width: 150px; height: 3px; background: linear-gradient(90deg, var(--accent), transparent); margin: 8px auto; opacity: 0.8;"></div>
+      </div>
+      <div style="font-weight: 600; font-size: 16px; margin-bottom: 12px; color: var(--text-primary);">مؤسس ومطور منصة Analytix</div>
+      <div style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">خبير التحليل المالي والتكنولوجيا المالية | 12+ عاماً خبرة</div>
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <a href="https://www.linkedin.com/in/dr-medhat-mehanna" target="_blank" style="color: var(--accent); font-size: 14px; text-decoration: none; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 6px;">LinkedIn ↗</a>
+        <a href="https://x.com/medhatmehanna" target="_blank" style="color: var(--accent); font-size: 14px; text-decoration: none; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 6px;">X ↗</a>
+      </div>
+    </div>
+    <div style="color: var(--text-muted); font-size: 12px;">© 2026 أكاديمية Analytix | جميع الحقوق محفوظة</div>
+  </footer>
+
+</div>
+
+<script src="js/theme.js"></script>
+<script>
+function generatePDF() {
+  const printContent = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>IAS 1 — عرض القوائم المالية | أكاديمية Analytix</title>
+<style>
+@page { size: A4; margin: 2cm; }
+body { font-family: Arial; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 20px; }
+.header { text-align: center; border-bottom: 3px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+.header h1 { color: #D4AF37; font-size: 28px; margin: 0; }
+.title { background: #D4AF37; color: white; padding: 25px; border-radius: 12px; margin-bottom: 30px; text-align: center; }
+.content { margin: 20px 0; }
+.author { border-top: 2px solid #D4AF37; padding-top: 20px; margin-top: 40px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>أكاديمية Analytix</h1>
+  <p>المرجع الشامل للمعايير المحاسبية والمالية الدولية</p>
+</div>
+<div class="title">
+  <h2>IAS 1 — عرض القوائم المالية</h2>
+  <p>Presentation of Financial Statements</p>
+</div>
+<div class="content">
+  <h3>📋 مكونات القوائم المالية</h3>
+  <ol>
+    <li>قائمة المركز المالي (الميزانية العمومية)</li>
+    <li>قائمة الأرباح والخسائر والدخل الشامل الآخر</li>
+    <li>قائمة التغيرات في حقوق الملكية</li>
+    <li>قائمة التدفقات النقدية</li>
+    <li>الإيضاحات المتممة للقوائم المالية</li>
+  </ol>
+</div>
+<div class="author">
+  <strong>بقلم: مدحت مهنا</strong><br>
+  مؤسس ومطور منصة Analytix<br>
+  https://analytix.finance/academy
+</div>
+</body>
+</html>`;
+
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(printContent);
+  printWindow.document.close();
+  setTimeout(() => { printWindow.print(); printWindow.close(); }, 1000);
+}
+</script>
+</body>
+</html>

@@ -98,3 +98,47 @@
 
 </body>
 </html>
+<script>
+function generatePDF() {
+  // الحصول على البيانات من الصفحة الحالية
+  const title = document.querySelector('.article-title-main')?.textContent || 'معيار مالي';
+  const summary = document.querySelector('.article-summary')?.textContent || '';
+  
+  const printContent = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>${title} | أكاديمية Analytix</title>
+<style>
+@page { size: A4; margin: 2cm; }
+body { font-family: Arial; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 20px; }
+.header { text-align: center; border-bottom: 3px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+.header h1 { color: #D4AF37; font-size: 24px; margin: 0; }
+.title { background: #D4AF37; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
+.summary { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>أكاديمية Analytix</h1>
+  <p>المرجع الشامل للمعايير المحاسبية والمالية</p>
+</div>
+<div class="title">
+  <h2>${title}</h2>
+</div>
+<div class="summary">
+  <h3>📋 ملخص المعيار</h3>
+  <p>${summary}</p>
+</div>
+<footer style="position: fixed; bottom: 1cm; text-align: center; font-size: 11px; color: #999;">
+© ${new Date().getFullYear()} أكاديمية Analytix | https://analytix.finance/academy
+</footer>
+</body>
+</html>`;
+
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(printContent);
+  printWindow.document.close();
+  setTimeout(() => { printWindow.print(); printWindow.close(); }, 1000);
+}
+</script>

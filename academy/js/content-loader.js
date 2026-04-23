@@ -185,46 +185,70 @@
     return d.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
   }
   
-  function generatePDF(data) {
-    const url = `pdf-viewer/index.html?type=${data.category}&id=${data.id}`;
-    window.open(url, '_blank');
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    const type = getQueryParam('type');
-    const id = getQueryParam('id');
-    if (type && id) {
-      loadContent(type, id);
-    }
-  });
-  
-  window.AnalytixContent = { load: loadContent };
-})();
-
-// تحديث generatePDF function
+// إصلاح مباشر لوظيفة PDF
 function generatePDF(data) {
-  if (window.AnalytixPDF) {
-    window.AnalytixPDF.generateStandardPDF(data);
-  } else {
-    // Fallback: فتح نافذة طباعة بسيطة
-    const printContent = `
-<!DOCTYPE html>
+  // توليد PDF مباشر بدون dependencies خارجية
+  const printContent = `<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><title>${data.title}</title>
-<style>body{font-family:Arial;padding:20px;line-height:1.6;}h1{color:#D4AF37;}</style>
+<head>
+<meta charset="UTF-8">
+<title>${data.title} | أكاديمية Analytix</title>
+<style>
+@page { size: A4; margin: 2cm; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 20px; }
+.header { text-align: center; border-bottom: 3px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
+.header h1 { color: #D4AF37; font-size: 24px; margin: 0; }
+.title-section { background: linear-gradient(135deg, #D4AF37, #F59E0B); color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
+.title-section h2 { margin: 0 0 10px 0; font-size: 22px; }
+.summary { background: #f8f9fa; border: 1px solid #e9ecef; padding: 20px; margin: 20px 0; border-radius: 6px; }
+.key-points { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; margin: 15px 0; border-radius: 6px; }
+.footer { position: fixed; bottom: 1cm; left: 0; right: 0; text-align: center; font-size: 11px; color: #999; }
+@media print { body { print-color-adjust: exact; } }
+</style>
 </head>
 <body>
-<h1>${data.title}</h1>
-<p><strong>الملخص:</strong> ${data.content?.summary || ''}</p>
-${data.content?.keyTakeaways ? `<h3>النقاط الرئيسية:</h3><ul>${data.content.keyTakeaways.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
-<footer style="margin-top:40px;color:#666;">© أكاديمية Analytix | ${new Date().toLocaleDateString('ar-EG')}</footer>
-</body></html>`;
-    
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write(printContent);
-    printWindow.document.close();
-    printWindow.onload = () => {
-      setTimeout(() => { printWindow.print(); printWindow.close(); }, 500);
-    };
-  }
+<div class="header">
+  <h1>أكاديمية Analytix</h1>
+  <p>المرجع الشامل للمعايير المحاسبية والمالية</p>
+  <p style="font-size: 12px; color: #666;">${new Date().toLocaleDateString('ar-EG')}</p>
+</div>
+
+<div class="title-section">
+  <h2>${data.title}</h2>
+  <p style="margin: 0; font-size: 14px;">${data.titleEn || ''}</p>
+</div>
+
+<div class="summary">
+  <h3 style="color: #1E293B; margin-top: 0;">📋 ملخص المعيار</h3>
+  <p>${data.content?.summary || 'غير متاح'}</p>
+</div>
+
+${data.content?.keyTakeaways ? `
+<div class="key-points">
+  <h3 style="color: #1E293B; margin-top: 0;">📌 النقاط الرئيسية</h3>
+  <ul style="margin: 10px 0; padding-right: 20px;">
+    ${data.content.keyTakeaways.map(point => `<li style="margin-bottom: 8px;">${point}</li>`).join('')}
+  </ul>
+</div>
+` : ''}
+
+<div class="footer">
+  <p>© ${new Date().getFullYear()} أكاديمية Analytix | https://analytix.finance/academy</p>
+</div>
+
+</body>
+</html>`;
+
+  // فتح نافذة طباعة
+  const printWindow = window.open('', '_blank', 'width=800,height=600');
+  printWindow.document.write(printContent);
+  printWindow.document.close();
+  
+  printWindow.onload = () => {
+    setTimeout(() => {
+      printWindow.focus();
+      printWindow.print();
+      printWindow.close();
+    }, 1000);
+  };
 }

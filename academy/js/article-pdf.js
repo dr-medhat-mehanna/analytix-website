@@ -23,6 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // توليد PDF
         window.AnalytixPDF.generateStandardPDF(standardData);
         
+        // Track PDF download
+        if (typeof gtag !== "undefined") {
+          gtag("event", "pdf_download", {
+            article_type: type,
+            article_id: id,
+            content_category: type,
+            file_name: standardData.title
+          });
+        }
+        
       } catch (error) {
         console.error('Error generating PDF:', error);
         alert('حدث خطأ في توليد ملف PDF');

@@ -9,7 +9,9 @@
     sox: "data/standards/sox/"+id+".json",
     coso: "data/standards/coso/"+id+".json",
     cfo: "data/cfo-tasks/"+id+".json",
-    controls: "data/internal-controls/"+id+".json"
+    controls: "data/internal-controls/"+id+".json",
+    articles: "data/articles/"+id+".json",
+    featured: "data/articles/"+id+".json"
   };
   if (!paths[type]) { showError("unknown type"); return; }
   fetch(paths[type])

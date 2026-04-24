@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener("DOMContentLoaded", function() {
   var params = new URLSearchParams(window.location.search);
   var type = params.get("type");
   var id = params.get("id");
@@ -88,4 +88,4 @@
     w.document.close();
     setTimeout(function(){w.print();},800);
   }
-})();
+});

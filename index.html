@@ -128,19 +128,19 @@ footer{border-top:0.5px solid var(--gold-border);padding:40px 52px;display:flex;
   <a href="#trial" class="nav-cta">ابدأ مجانا</a>
 </nav>
 <style>
-.hl-section{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:60px 52px 80px;direction:rtl;position:relative;overflow:hidden;background:#09090f;font-family:"Tajawal",sans-serif;}
+.hl-section{min-height:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:40px 52px 50px;direction:rtl;position:relative;overflow:hidden;background:#09090f;font-family:"Tajawal",sans-serif;}
 .hl-bg-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse,rgba(201,168,76,0.08) 0%,transparent 65%);pointer-events:none;z-index:0;}
 .hl-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(201,168,76,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.025) 1px,transparent 1px);background-size:68px 68px;pointer-events:none;}
 .hl-left{position:relative;z-index:5;text-align:right;}
 .hl-right{position:relative;z-index:5;}
-.hl-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);padding:8px 22px;border-radius:28px;font-size:12px;color:#E8C76A;letter-spacing:1.5px;margin-bottom:28px;font-family:"Tajawal",sans-serif;font-weight:500;}
+.hl-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);padding:8px 22px;border-radius:28px;font-size:12px;color:#E8C76A;letter-spacing:1.5px;margin-bottom:16px;font-family:"Tajawal",sans-serif;font-weight:500;}
 .hl-badge-dot{width:6px;height:6px;border-radius:50%;background:#E8C76A;animation:hlPulse 2s ease-in-out infinite;}
 @keyframes hlPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.hl-title{font-family:"Al Hurra","Tajawal",sans-serif;color:#ffffff;font-size:clamp(30px,3.8vw,48px);font-weight:700;line-height:1.2;margin:0 0 18px 0;padding:0;display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
+.hl-title{font-family:"Al Hurra","Tajawal",sans-serif;color:#ffffff;font-size:clamp(30px,3.8vw,48px);font-weight:700;line-height:1.2;margin:0 0 10px 0;padding:0;display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
 .hl-title-1{display:block;color:#ffffff;}
 .hl-title-2{display:block;color:#E8C76A;font-family:"Al Hurra","Tajawal",sans-serif;font-weight:700;}
-.hl-sub{color:rgba(255,255,255,0.55);font-size:15px;margin:0 0 18px 0;font-family:"Tajawal",sans-serif;font-weight:400;}
-.hl-desc{color:rgba(255,255,255,0.78);font-size:16px;line-height:1.9;max-width:580px;margin:0 0 32px 0;font-weight:400;font-family:"Tajawal",sans-serif;}
+.hl-sub{color:rgba(255,255,255,0.55);font-size:15px;margin:0 0 10px 0;font-family:"Tajawal",sans-serif;font-weight:400;}
+.hl-desc{color:rgba(255,255,255,0.78);font-size:16px;line-height:1.9;max-width:580px;margin:0 0 20px 0;font-weight:400;font-family:"Tajawal",sans-serif;}
 .hl-desc strong{color:#ffffff;font-weight:700;}
 .hl-btns{display:flex;gap:14px;flex-wrap:wrap;margin:0;}
 .hl-btn-primary{background:#C9A84C;color:#09090f;border:none;padding:14px 36px;border-radius:10px;font-size:15px;font-weight:700;font-family:"Tajawal",sans-serif;text-decoration:none;display:inline-block;transition:all 0.2s;}
@@ -161,13 +161,13 @@ footer{border-top:0.5px solid var(--gold-border);padding:40px 52px;display:flex;
 .hl-kpi-safe{color:#E8C76A}
 .hl-chart{height:90px;background:rgba(255,255,255,0.02);border-radius:8px;padding:12px;}
 .hl-chart svg{width:100%;height:100%;display:block}
-.hl-flags{grid-column:1 / -1;display:flex;justify-content:center;gap:14px;margin-top:40px;flex-wrap:wrap;position:relative;z-index:5;}
+.hl-flags{grid-column:1 / -1;display:flex;justify-content:center;gap:14px;margin-top:24px;flex-wrap:wrap;position:relative;z-index:5;}
 .hl-flag{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:22px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);font-size:13px;color:rgba(255,255,255,0.8);font-weight:500;}
 .hl-flag-active{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.1);color:#E8C76A;}
 .hl-flag-soon{opacity:0.55}
 .hl-flag-emoji{font-size:20px;line-height:1}
 .hl-flag-tag{font-size:10px;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:4px;margin-right:4px;font-weight:500;}
-.hl-landmarks{position:absolute;bottom:0;left:0;right:0;height:340px;pointer-events:none;z-index:1;opacity:0.5;}
+.hl-landmarks{position:absolute;bottom:0;left:0;right:0;height:240px;pointer-events:none;z-index:1;opacity:0.5;}
 .hl-landmarks svg{width:100%;height:100%;display:block}
 @media(max-width:968px){.hl-section{grid-template-columns:1fr;padding:60px 20px 80px;min-height:auto;}.hl-left{text-align:center}.hl-desc{margin-left:auto;margin-right:auto}.hl-btns{justify-content:center}.hl-landmarks{height:180px;opacity:0.25}}
 </style>

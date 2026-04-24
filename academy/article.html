@@ -5,45 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>جاري التحميل... | أكاديمية Analytix</title>
 <meta name="description" content="مقال متخصص في الإدارة المالية والمحاسبة">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/article.css">
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-XXXXXXXXXX");
-  
-  // Track article views
-  document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const articleType = urlParams.get("type");
-    const articleId = urlParams.get("id");
-    
-    if (articleType && articleId) {
-      gtag("event", "article_view", {
-        article_type: articleType,
-        article_id: articleId,
-        content_category: articleType
-      });
-    }
-  });
-</script>
 </head>
 <body>
-
 <nav class="top-nav">
   <div class="container nav-inner">
     <a href="./" class="nav-brand">
       <img src="assets/logo.png" alt="Analytix" onerror="this.style.display='none'">
       <span class="nav-brand-text">أكاديمية Analytix</span>
     </a>
-    
     <div class="nav-links">
-      <a href="https://analytix.finance/" class="nav-link">الرئيسية</a><a href="./" class="nav-link">الأكاديمية</a>
-      <a href="interactive-standards/" class="nav-link">🗺️ الخريطة</a>
+      <a href="https://analytix.finance/" class="nav-link">الرئيسية</a>
+      <a href="./" class="nav-link">الأكاديمية</a>
+      <a href="interactive-standards/" class="nav-link">الخريطة</a>
       <a href="https://app.analytix.finance" class="nav-link">المنصة</a>
       <button class="theme-toggle" aria-label="Toggle theme">☀️</button>
     </div>
@@ -52,17 +28,14 @@
 
 <div class="container">
   <section class="article-hero">
-    <nav class="breadcrumb" style="justify-content: center;">
+    <nav class="breadcrumb" style="justify-content:center">
       <a href="./">الأكاديمية</a>
       <span class="breadcrumb-separator">/</span>
       <span class="article-category-crumb">المعايير</span>
     </nav>
-    
     <span class="article-category">جاري التحميل</span>
-    
     <h1 class="article-title-main">...</h1>
     <div class="article-subtitle"></div>
-    
     <div class="article-meta-bar">
       <span>⏱ <span class="article-reading-time">-</span></span>
       <span>📅 <span class="article-updated">-</span></span>
@@ -73,36 +46,43 @@
 <div class="container article-container">
   <div class="article-layout">
     <main class="article-content">
-      <div class="article-summary"></div>
+
+      <!-- القسم 1: تعريف — يُبنى من summary في JSON -->
+      <div class="definition-box"></div>
+
+      <!-- الأقسام: جوهر + مثال بالأرقام — من sections في JSON -->
       <div class="article-sections"></div>
+
+      <!-- الملخص والفائدة — من keyTakeaways في JSON -->
       <div class="article-takeaways"></div>
+
+      <!-- مقالات ذات صلة -->
       <div class="article-related"></div>
     </main>
-    
+
     <aside class="article-sidebar">
       <div class="sidebar-card">
-        <h4>تحميل المحتوى</h4>
+        <h4>تحميل المحتوى مجاناً</h4>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px">تحميل هذا المقال كـ PDF جاهز للطباعة</p>
         <button class="pdf-download-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
           </svg>
-          <span>تحميل PDF</span>
+          <span>تحميل PDF مجاناً</span>
         </button>
       </div>
-      
+
       <div class="sidebar-card">
         <h4>الوسوم</h4>
         <div class="article-tags"></div>
       </div>
-      
+
       <div class="sidebar-card">
         <h4>أكاديمية Analytix</h4>
-        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px;">
+        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px">
           المرجع العربي الأشمل في الإدارة المالية والمحاسبة الدولية.
         </p>
-        <a href="./" style="font-size: 0.85rem; color: var(--accent); font-weight: 600;">
-          ← العودة للأكاديمية
-        </a>
+        <a href="./" style="font-size:0.85rem;color:var(--accent);font-weight:600">← العودة للأكاديمية</a>
       </div>
     </aside>
   </div>
@@ -111,111 +91,15 @@
 <footer>
   <div class="container">
     <p>© 2026 <a href="https://analytix.finance">Analytix Finance</a> — جميع الحقوق محفوظة</p>
+    <p style="font-size:0.8rem;margin-top:4px">
+      <a href="https://app.analytix.finance">منصة التحليل المالي</a>
+      <span style="margin:0 12px;opacity:0.3">•</span>
+      <a href="https://www.linkedin.com/company/analytix-for-finance/">LinkedIn</a>
+    </p>
   </div>
 </footer>
 
 <script src="js/theme.js"></script>
-<script src="js/pdf-generator.js?v=20260424b"></script>
-<script src="js/article-pdf.js"></script>
-<script src="js/content-loader-fixed.js"></script>
-
+<script src="js/content-loader.js?v=20260424c"></script>
 </body>
 </html>
-<script>
-function generatePDF() {
-  // الحصول على البيانات من الصفحة الحالية
-  const title = document.querySelector('.article-title-main')?.textContent || 'معيار مالي';
-  const summary = document.querySelector('.article-summary')?.textContent || '';
-  
-  const printContent = `<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>${title} | أكاديمية Analytix</title>
-<style>
-@page { size: A4; margin: 2cm; }
-body { font-family: Arial; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 20px; }
-.header { text-align: center; border-bottom: 3px solid #D4AF37; padding-bottom: 20px; margin-bottom: 30px; }
-.header h1 { color: #D4AF37; font-size: 24px; margin: 0; }
-.title { background: #D4AF37; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
-.summary { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 6px; }
-.callout {
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 6px;
-  border-left: 4px solid;
-}
-.callout.info { background: #e3f2fd; border-color: #1976d2; }
-.callout.warning { background: #fff3e0; border-color: #f57c00; }
-.callout.success { background: #e8f5e8; border-color: #388e3c; }
-.callout.danger { background: #ffebee; border-color: #d32f2f; }
-.example {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
-  padding: 20px;
-  margin: 20px 0;
-}
-.scenario, .solution {
-  margin: 10px 0;
-}
-.key-takeaways, .related-content {
-  background: #f1f3f4;
-  padding: 15px;
-  border-radius: 6px;
-  margin: 20px 0;
-}
-.error {
-  color: #d32f2f;
-  text-align: center;
-  padding: 20px;
-}
-</style>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-XXXXXXXXXX");
-  
-  // Track article views
-  document.addEventListener("DOMContentLoaded", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const articleType = urlParams.get("type");
-    const articleId = urlParams.get("id");
-    
-    if (articleType && articleId) {
-      gtag("event", "article_view", {
-        article_type: articleType,
-        article_id: articleId,
-        content_category: articleType
-      });
-    }
-  });
-</script>
-</head>
-<body>
-<div class="header">
-  <h1>أكاديمية Analytix</h1>
-  <p>المرجع الشامل للمعايير المحاسبية والمالية</p>
-</div>
-<div class="title">
-  <h2>${title}</h2>
-</div>
-<div class="summary">
-  <h3>📋 ملخص المعيار</h3>
-  <p>${summary}</p>
-</div>
-<footer style="position: fixed; bottom: 1cm; text-align: center; font-size: 11px; color: #999;">
-© ${new Date().getFullYear()} أكاديمية Analytix | https://analytix.finance/academy
-</footer>
-</body>
-</html>`;
-
-  const printWindow = window.open('', '_blank');
-  printWindow.document.write(printContent);
-  printWindow.document.close();
-  setTimeout(() => { printWindow.print(); printWindow.close(); }, 1000);
-}
-</script>

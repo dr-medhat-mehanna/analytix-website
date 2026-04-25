@@ -451,3 +451,5 @@ body.light-mode .example-solution {
 .author-signature img{height:52px;display:block;margin-bottom:6px}
 .author-signature .sig-name{font-size:15px;font-weight:700;color:var(--text-primary);font-family:Tajawal,sans-serif}
 .author-signature .sig-title{font-size:12px;color:var(--text-muted);font-family:Tajawal,sans-serif;margin-top:3px}
+.author-signature img { content: url("https://analytix.finance/academy/assets/signature.png"); }
+.author-signature img { content: url("https://analytix.finance/academy/assets/signature.png"); }

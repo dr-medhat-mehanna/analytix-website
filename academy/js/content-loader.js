@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (tagsEl && d.tags && d.tags.length) {
       tagsEl.innerHTML = d.tags.map(function(t){return "<span class='tag-pill'>"+t+"</span>";}).join("");
     }
-    var btn = document.querySelector(".pdf-download-btn");
+    var btn = var sigEl=document.querySelector(".article-signature"); if(sigEl){sigEl.innerHTML="<div class='author-signature'><img src='assets/signature.png' alt='توقيع'><div class='sig-name'>مدحت مهنا</div><div class='sig-title'>مؤسس ومطور أكاديمية Analytix</div></div>";} document.querySelector(".pdf-download-btn");
     if (btn) btn.addEventListener("click", function(){ printArticle(d); });
   }
   function buildSections(sections) {
